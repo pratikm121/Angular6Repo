@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<label>Server Name</label>
+<!--This is one way of doing data binding called property binding-->
+<input class="form-control" type="text" (input) = "onUpdateServerName($event)">
+<!-- <p>{{serverName}}</p>  -->
+<br>
+<!--This is anotrher way of doing data binding 2way binding-->
+<label>Server Status</label>
+<input class="form-control" type="text" [(ngModel)] = "serverStatus">
+<br>
+<button class = "btn btn-primary" id = "submit" (click)= "onSubmitButton()">Submit</button>
+<p>{{serverUpdatedStatus}}</p>    
+
+<hr>
+<h1>Basic Assignment 2</h1>
+<ul>
+    <li>Add a input field which updated a property 'username' via 2 way binding</li>
+    <li>Output username via String interpolation below input</li>
+    <li>Add a button which may only be clicked if username is NOT empty</li>
+    <li>Upon clicking the button , usrname should be reset to empty string</li>
+</ul>
+
+<label>User Name</label>
+<!--This is one way of doing data binding called property binding-->
+<input class="form-control" type="text" [(ngModel)] = "userName">
+<br>
+<button class = "btn btn-primary" id = "reset" (click)= "onResetButton()" [disabled] = "userName ===''">Reset</button>
+<p>User Name :- {{userName}}</p> 
+<hr> 

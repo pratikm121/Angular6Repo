@@ -1,0 +1,8 @@
+<p [hidden] = "!showAlert">{{name + title}}</p>
+<button [disabled] = "!showAlert"
+(click)= "onButtonClick()">Add Alert</button>
+<p>{{buttonClick}}</p>
+<!--
+<hr>
+<p [hidden] = "!showAlert" [innerText] = "warningMessage"></p>
+-->
