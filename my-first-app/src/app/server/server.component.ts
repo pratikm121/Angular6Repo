@@ -11,9 +11,13 @@ export class ServerComponent{
     title = ', this is calling your server component';
     name = 'Pratik';
     serverName = '';
-    serverStatus = '';
+    serverStatus = 'offline';
     serverUpdatedStatus = '';
     userName = '';
+
+    constructor(){
+        this.serverStatus = Math.random()>0.5 ? 'online': 'offline';
+    }
 
     onUpdateServerName(event: Event){
         this.serverName = (<HTMLInputElement>event.target).value;
@@ -29,5 +33,9 @@ export class ServerComponent{
 
     onResetButton(){
         this.userName = '';
+    }
+
+    getColor(){
+        return this.serverStatus === 'online' ? 'blue' : 'red';
     }
 }

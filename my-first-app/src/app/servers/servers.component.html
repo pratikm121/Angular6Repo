@@ -1,2 +1,14 @@
+
 <h3>{{name+title}} </h3>
+<label>User Name</label>
+<!--This is one way of doing data binding called property binding-->
+<input class="form-control" type="text" [(ngModel)] = "userName">
+<br>
+<button class = "btn btn-primary" id = "submit" (click)= "onSubmitButton()" [disabled] = "userName ===''">Submit</button>
+<button class = "btn btn-primary" id = "reset" (click)= "onResetButton()" [disabled] = "userName ===''">Reset</button>
+<p *ngIf = "userUpdateStatus ; else noUserUpdate">{{userStatusName}}</p>
+<ng-template #noUserUpdate>
+    <p [ngStyle] = "{backgroundColor :userbackgroundColor}">User Cannot be blank</p>
+</ng-template>
+<hr> 
 <app-server></app-server>
