@@ -1,0 +1,33 @@
+<h1>Basic Assignment 2</h1>
+<ul>
+    <li>Add a input field which updated a property 'username' via 2 way binding</li>
+    <li>Output username via String interpolation below input</li>
+    <li>Add a button which may only be clicked if username is NOT empty</li>
+    <li>Upon clicking the button , usrname should be reset to empty string</li>
+</ul>
+
+<label>User Name</label>
+<!--This is one way of doing data binding called property binding-->
+<input class="form-control" type="text" [(ngModel)] = "userName">
+<br>
+<button class = "btn btn-primary" id = "reset" (click)= "onResetButton()" [disabled] = "userName ===''">Reset</button>
+<p>User Name :- {{userName}}</p> 
+<hr>
+
+<h1>Basic Assignment 3</h1>
+<ul>
+    <li>Add a button which says 'Display Details' </li>
+    <li>Add a paragraph of your choice </li>
+    <li>Toggle the displaying of paragraph with button created above</li>
+    <li>Log all button clicks in an array and output below the paragraph</li>
+    <li>Starting at 5th log item , give all future log items as blue background (via ngStyle)and white color (via ngClass)</li>
+</ul>
+<br>
+<button class = "btn btn-primary" id = "displayToggle" (click)= "onClickToggleButton()" >Display Details</button>
+<p *ngIf = 'showPara'>This is the para i m going to toggle on the click of Display Details button</p> 
+<ul *ngFor="let clicked of clickCounterArray">
+    <li [ngStyle] = "{backgroundColor :clicked >4 ? 'blue' : 'transaparent' }" 
+        [ngClass] = "{'myColor'  :clicked >4}">You have clicked me button  {{ clicked }} times.</li>   
+</ul>
+<br>
+<p>{{Date | date:'dd.MM.yyyy HH:mm:ss'}}</p>

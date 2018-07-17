@@ -1,13 +1,27 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-<body>
+<app-header></app-header>
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 style="text-align: center">My App is ready to work</h2>
+                <app-recipes></app-recipes>
+                <app-shopping-list></app-shopping-list>
+            </div>
+        </div>
+</div>
+<footer style="text-align: right">{{today | date}}</footer>
+<!--
     <div class="jumbotron text-center">
         <div class="jumbotron text-center">
-            <h3>Hello {{name}} I'm in the App Component {{title}}</h3>
+            <h3>{{title}}</h3>
             <hr>
+            
             <app-servers></app-servers>
             <hr>
-            <!-- <app-success></app-success>
-            <app-warning></app-warning> -->
+             <app-success></app-success>
+            <app-warning></app-warning>
+            
+            
         </div>
-    </div>
-</body>
+    </div>    
+-->    
+   

@@ -14,6 +14,7 @@ export class ServerComponent{
     serverStatus = 'offline';
     serverUpdatedStatus = '';
     userName = '';
+    serversArray = [];
 
     constructor(){
         this.serverStatus = Math.random()>0.5 ? 'online': 'offline';
@@ -29,6 +30,7 @@ export class ServerComponent{
 
     onSubmitButton(){
         this.serverUpdatedStatus = 'The server ' + this.serverName + ' was created for you with status = ' + this.serverStatus;
+        this.serversArray.push(this.serverUpdatedStatus);
     }
 
     onResetButton(){
