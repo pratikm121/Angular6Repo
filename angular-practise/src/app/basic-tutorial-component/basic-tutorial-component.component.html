@@ -1,32 +1,37 @@
 <div class= "container">  
     <div class="row alert-success">
-          <div class="col-sm-12">
+          <a href="#interpolation" class="btn btn-primary" data-toggle="collapse">Interpolation Example</a>
+          <div class="col-sm-12" id="interpolation">
             <interpolation-tut></interpolation-tut>
           </div>
     </div>
     <hr>
     <div class="row alert-warning">
-        <div class="col-sm-12">
+        <a href="#property" class="btn btn-primary" data-toggle="collapse">Property Example</a>
+        <div class="col-sm-12" id="property">
           <property-binding (anotherComponentOutput) = "anotherComponentOutput=$event"></property-binding>
         </div>
     </div>
     <hr>
     <div class="row alert-info">
-        <div class="col-sm-12">
+        <a href="#structures" class="btn btn-primary" data-toggle="collapse">Structures Example</a>
+        <div class="col-sm-12" id="structures">
           <structures></structures>
         </div>
     </div>
     <hr>
     <div class="row alert-danger">
-        <div class="col-sm-12">
+        <a href="#interact" class="btn btn-primary" data-toggle="collapse">Component Interaction Example</a>
+        <div class="col-sm-12" id="interact">
          <comp-interact (childEvent)= "testMessage=$event" [valueFromANotherComponent] = 'parentData'></comp-interact>
         </div>
     </div>
     <hr>
     <div class="row alert-info">
-      <div class="col-sm-12">
-       <service-example></service-example>
-      </div>
+        <a href="#service" class="btn btn-primary" data-toggle="collapse">Service Example</a>
+        <div class="col-sm-12" id="service">
+           <service-example></service-example>
+        </div>
   </div>
   <hr>
-  </div>
+</div>

@@ -50,10 +50,10 @@
           </div>
       </div>
       <div class="form-check mb-3">
-          <input class="form-check-input" type="checkbox" name ="userChoice" [(ngModel)]= "queryFormInput.choice">
+          <input class="form-check-input custom-control-label" type="checkbox" name ="userChoice" [(ngModel)]= "queryFormInput.choice">
           <label class="form-check-label">Send me promotional offers</label>
       </div>
-       <!-- <div ngModelGroup = "userAddress">
+        <div ngModelGroup = "userAddress" class="form-inline">
             <div class="form-group">
                     <label>Street</label>
                     <input type="text" class="form-control" name ="userStreet" [(ngModel)]= "queryFormInput.name">
@@ -70,53 +70,10 @@
                     <label>ZipCode</label>
                     <input type="text" class="form-control" name ="userZipCode" [(ngModel)]= "queryFormInput.name">
             </div>
-      </div> -->
+        </div>
       <button [disabled]="queryForm.form.invalid" class="btn btn-primary" type="submit">Submit</button>
   </form>
 </div>
 
 <!-- *ngIf="!submitted" -->
 
-
-<!-- <div [hidden]="submitted">
-    <h2>Customer Form</h2>
-    <form  (ngSubmit)="onSubmit()" #customerForm="ngForm">
-  
-      <div class="form-group display-4">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" required [(ngModel)]="forminputs.name" name="name" #name="ngModel">
-        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-            Name is required
-        </div>  
-      </div>
-  
-      <div class="form-group">
-        <label for="age">Age</label>
-        <input type="text" class="form-control" id="age" [(ngModel)]="forminputs.age" name="age">        
-      </div>
-  
-      <div class="form-group">
-        <label for="nationality">Nationality</label>
-        <select class="form-control" id="nationality" required [(ngModel)]="forminputs.nationality" name="nationality" #nationality="ngModel">
-                <option *ngFor="let nationality of nationalities" [value]="nationality">{{nationality}}</option>
-              </select>
-              <div [hidden]="nationality.valid || nationality.pristine" class="alert alert-danger">
-                  Nationality is required
-              </div>
-          
-      </div>
-  
-      <button type="submit" class="btn btn-primary" [disabled]="!customerForm.form.valid">Submit</button>
-    </form>
-</div>
- 
-<div [hidden]="!submitted" class="text-center">
-        <h2>Submitted Customer</h2>
-        <hr>
-        <div><span class="badge badge-info">Id</span> -> {{forminputs.id}}</div>
-        <div><span class="badge badge-info">Name</span> -> {{forminputs.name}}</div>
-        <div><span class="badge badge-info">Age</span> -> {{forminputs.age}}</div>
-        <div><span class="badge badge-info">Nationality</span> -> {{forminputs.nationality}}</div>
-        <br>
-        <button class="btn btn-primary" (click)="submitted=false">Edit</button>
-</div> -->

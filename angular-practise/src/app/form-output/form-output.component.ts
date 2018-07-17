@@ -17,7 +17,8 @@ export class FormOutputComponent {
   submitted = false;
   errorMsg = '';
   
-  
+  ngOnInit(){     
+  }
 
   constructor(private _queryFormService :QueryFormService){
   }
