@@ -1,0 +1,16 @@
+<div class= "container">
+    <h2> Chapter 4 Component Interaction examples</h2>
+    <div class="row">
+          <div class="col-sm-6">
+            <h3>Receiving input from parent Component Example</h3>
+            <p>The value of parentData variable in App Component is send to this Component as Input as below</p>
+            <p>{{myInputValue}}</p>            
+          </div>
+          <div class="col-sm-6" >
+              <h3>Sending output from another Component Example</h3>
+              <p>The value you enter below will be send to another Component as Output</p>
+              <input type="text" [(ngModel)] = "outputValue"><button class="btn btn-primary" (click) = "fireEvent()" >Press Me !!</button>
+          </div>          
+    </div>
+</div>
+

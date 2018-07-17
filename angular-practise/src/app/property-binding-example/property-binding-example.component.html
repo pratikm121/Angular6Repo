@@ -1,0 +1,31 @@
+<div class= "container">
+    <h2> Chapter 2 Binding examples</h2>
+    <div class="row">
+          <div class="col-sm-4">
+            <h3>Property Binding Example 1</h3>
+            <p>Press the button below to toggle the paragraph on your right</p>
+            <button (click) = "toggleExample($event)" class="btn btn-primary">Press Me !!</button>            
+          </div>
+          <div class="col-sm-4" [hidden] = "showExample">
+              <h3>Property Binding Example 2</h3>
+              <p>This paragraph will toggle itself based on the clicks on the Press Me button</p>             
+          </div>
+          <div class="col-sm-4" [hidden] = "!showExample">
+              <h3>Event Binding Example 3</h3>
+              <p>Also the button depicts the example of binding event properties</p>             
+          </div>
+          <div class="col-sm-4">
+              <h3>Event Binding Example 4</h3>
+              <p>This example shows template reference binding example</p>  
+              <input type="text" #yourTemplateReference><button (click) = "showTemplateReferenceValue($event)" class="btn btn-primary">Press Me Again!!</button>
+              <p>Your TemplateReference is {{yourTemplateReference.value}}  </p>
+              <p>Value received from Forms Tutorial Page Component- {{anotherComponentOutput}}</p>
+          </div>
+          <div class="col-sm-4">
+              <h3>2 Way Data Binding Example 5</h3>
+              <p>This example shows how to bind a value for 2 way processing from View->Component->View</p>  
+              <input type="text" [(ngModel)] = "twoWayBinding">
+              <p>Your twoWayBinding value is {{twoWayBinding}}  </p>
+          </div>
+    </div>
+</div>

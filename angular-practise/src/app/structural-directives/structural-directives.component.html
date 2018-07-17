@@ -1,0 +1,38 @@
+<div class= "container">
+    <h2> Chapter 3 Structural Directives examples</h2>
+    <div class="row">
+          <div class="col-sm-4">
+            <h3>Simple If block Example</h3>
+            <p>Press the below button and the value will be shown if the number of times clicked is odd</p>
+            <button *ngIf="isSimpleTrue" class="btn btn-primary" (click) = "toggleExample()">Press Me !!</button>
+            <p *ngIf="toggleAnotherExample">The value = {{counter}}</p>            
+          </div>
+          <div class="col-sm-4" >
+              <h3>Simple If else block Example</h3>
+              <p *ngIf="toggleAnotherExample ; else elseBlock" > The value is odd</p>
+              <ng-template #elseBlock>
+                <p> The value is even</p> 
+              </ng-template>
+                          
+          </div>
+          <div class="col-sm-4">
+              <h3>Simple ngSwitch example</h3>
+              <p>This example shows how to use the ngSwitch.</p>
+              <input type="text" [(ngModel)] = "color">  
+              <div [ngSwitch] ="color">
+                    <p *ngSwitchCase = "'red'">You picked red color</p>
+                    <p *ngSwitchCase = "'blue'">You picked blue color</p>
+                    <p *ngSwitchCase = "'green'">You picked green color</p>
+                    <p *ngSwitchDefault>Choose another color</p>
+              </div>
+          </div>
+          <div class="col-sm-4">
+              <h3>For Loop Example</h3>
+              <p>This example shows how to *ngFor directive</p>  
+              <ul *ngFor = "let myColor of colors; first as f; last as l; odd as o; even as e; index as i">
+                  <li>Index position of {{myColor}} = {{i}}  :- Is it in first position of the array : {{f}}. Is it in the odd position : {{o}}. 
+                                     Is it in even position of the array : {{e}}. Is it in the last position : {{l}}.  </li>
+              </ul>
+          </div>
+    </div>
+</div>

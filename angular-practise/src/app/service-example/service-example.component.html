@@ -1,0 +1,32 @@
+<div class= "container">
+  <h2> Chapter 5 Using Service examples</h2>
+  <div class="row">
+        <div class="col-sm-4">
+          <h3>Service Example 1</h3>
+          <p>This Example shows the usage of services in Angular. Services in Angular is used by Components to get data or perform business logic</p>
+          <ul *ngFor = "let user of usersData">
+            <p>{{user.id}}.  {{user.userId}}  {{user.title}} {{user.body}}</p>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3>Service & Http Example 2</h3>
+          <p>This Example shows the usage of services along with Http modules to load data from dummy json file</p>
+          <p>{{errorMsg}}</p>
+          <ul *ngFor = "let user of usersJsonData">
+            <p>{{user.id}}.  {{user.userId}}  {{user.title}} {{user.body}}</p>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3>Service & Http Example 3</h3>
+          <p>This Example shows the usage of services along with Http modules to load data from actual web Service url 'https://jsonplaceholder.typicode.com/'</p>
+          <ul *ngFor = "let user of usersHttpData">
+            <p>{{user.id}}.  {{user.userId}}  {{user.title}} {{user.body}}</p>
+          </ul>
+          <p>{{errorMsg}}</p>
+        </div>
+        
+  </div>
+</div>
+
+
+

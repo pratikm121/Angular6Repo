@@ -1,0 +1,32 @@
+<div class= "container">  
+    <div class="row alert-success">
+          <div class="col-sm-12">
+            <interpolation-tut></interpolation-tut>
+          </div>
+    </div>
+    <hr>
+    <div class="row alert-warning">
+        <div class="col-sm-12">
+          <property-binding (anotherComponentOutput) = "anotherComponentOutput=$event"></property-binding>
+        </div>
+    </div>
+    <hr>
+    <div class="row alert-info">
+        <div class="col-sm-12">
+          <structures></structures>
+        </div>
+    </div>
+    <hr>
+    <div class="row alert-danger">
+        <div class="col-sm-12">
+         <comp-interact (childEvent)= "testMessage=$event" [valueFromANotherComponent] = 'parentData'></comp-interact>
+        </div>
+    </div>
+    <hr>
+    <div class="row alert-info">
+      <div class="col-sm-12">
+       <service-example></service-example>
+      </div>
+  </div>
+  <hr>
+  </div>
