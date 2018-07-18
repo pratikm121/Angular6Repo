@@ -14,6 +14,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { BasicTutorialComponentComponent } from './basic-tutorial-component/basic-tutorial-component.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { JqueryComponent } from './jquery/jquery.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ServiceExampleComponent,
     HeaderComponentComponent,
     BasicTutorialComponentComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    JqueryComponent
   ],
   imports: [
     BrowserModule,
