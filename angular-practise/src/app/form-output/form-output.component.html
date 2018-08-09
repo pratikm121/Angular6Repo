@@ -74,6 +74,16 @@
       <button [disabled]="queryForm.form.invalid" class="btn btn-primary" type="submit">Submit</button>
   </form>
 </div>
+<div class="row">
+    <div class="col-sm-12">
+      <h3>Service & Http Example 6</h3>
+      <p>Spring Rest Api call 3</p>
+      <ul *ngFor = "let user of anotherRestApiCall">
+        <p>{{user.id}}.  {{user.userId}}  {{user.title}} {{user.body}}</p>
+      </ul>
+      <p>{{errorMsg}}</p>
+    </div>
+  </div>
 
 <!-- *ngIf="!submitted" -->
 

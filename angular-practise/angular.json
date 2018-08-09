@@ -23,14 +23,15 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/jquery/dist/datetimepicker.css",
-              "node_modules/jquery/dist/jquery-ui.css"
+              "node_modules/jquery-datetimepicker/jquery.datetimepicker.css",             
+              "node_modules/jquery/dist/jquery-ui.css",
+              "node_modules/jquery/dist/theme.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery-3.2.0.js",
+              "node_modules/jquery-datetimepicker/datetimepicker.js",
               "node_modules/jquery/dist/jquery-ui.js",
-              "node_modules/jquery/dist/datetimepicker.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },

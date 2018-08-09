@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StructuralDirectivesComponent implements OnInit {
 
-  private isSimpleTrue :boolean = true;
-  private toggleAnotherExample :boolean = true;
-  private counter : number=0;
-  private color:String = 'red';
-  private colors = ['red','green','blue','orange'];
+  public isSimpleTrue :boolean = true;
+  public toggleAnotherExample :boolean = true;
+  public counter : number=0;
+  public color:String = 'red';
+  public colors = ['red','green','blue','orange'];
 
   constructor() { }
 

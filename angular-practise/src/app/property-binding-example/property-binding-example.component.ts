@@ -8,10 +8,10 @@ import { QueryFormService } from '../query-form.service';
 })
 export class PropertyBindingExampleComponent implements OnInit {
 
-  private showExample:boolean;
+  public showExample:boolean;
   @Output('myOutputValue') private yourTemplateReference:String;
   public anotherComponentOutput:String;
-  private twoWayBinding:String;
+  public twoWayBinding:String;
 
 
   constructor(private _queryFormService :QueryFormService) { }

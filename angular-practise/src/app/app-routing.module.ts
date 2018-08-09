@@ -10,11 +10,11 @@ const routes :Routes =[
     {path : 'tutorials', component : BasicTutorialComponentComponent},
     {path : 'forms', component : FormOutputComponent},
     {path : 'jquery', component : JqueryComponent},
-    {path : '**', component : PageNotFoundComponent}
+    {path : '**', component : PageNotFoundComponent},
 ];
 
 @NgModule({
-    imports:[RouterModule.forRoot(routes)],
+    imports:[RouterModule.forRoot(routes),],
     exports:[RouterModule]
 })
 

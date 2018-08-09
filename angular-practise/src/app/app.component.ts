@@ -5,7 +5,7 @@ import { FormInputs } from './form-output/formInput.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['../styles.css']
+  styleUrls: []
 })
 export class AppComponent {
   title = 'Welcome to Angular 6 tutorials';
@@ -14,8 +14,7 @@ export class AppComponent {
   constructor() {   
   }
   
-  ngOnInit(){
-      
+  ngOnInit(){  
   }
 
  

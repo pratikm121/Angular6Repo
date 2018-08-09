@@ -13,7 +13,10 @@ import 'rxjs/add/observable/throw';
 export class MyServiceService {
 
   private _dummyDataJsonUrl = "/assets/DummyData/dummyData.json";
-  private _actualDataJsonUrl = "https://jsonplaceholder.typicode.com/posts/1";
+  private _actualDataJsonUrl = "https://jsonplaceholder.typicode.com/posts/";
+  private _springRestApiUrl = "/AngularTutorial/tutorials/api/hi";
+  private _springRestApiUrl2 = "/AngularTutorial/tutorials/rest/hi";
+  private _springRestApiUrl3 = "/AngularTutorial/forms/rest/hi";
 
   constructor(private http:HttpClient) { }
 
@@ -33,7 +36,22 @@ export class MyServiceService {
     return this.http.get<DummyDataInterface[]>(this._dummyDataJsonUrl);
   }
 
+  getDataViaSpringRestApi():Observable<DummyDataInterface[]>{
+    console.log('Got the call ');
+    console.log(this.http.get<DummyDataInterface[]>(this._springRestApiUrl).catch(this.errorHandler));
+    return this.http.get<DummyDataInterface[]>(this._springRestApiUrl).catch(this.errorHandler);
+  }
+
+  getDataViaSpringRestApi2():Observable<DummyDataInterface[]>{
+    return this.http.get<DummyDataInterface[]>(this._springRestApiUrl2).catch(this.errorHandler);
+  }
+
+  getDataViaSpringRestApi3():Observable<DummyDataInterface[]>{
+    return this.http.get<DummyDataInterface[]>(this._springRestApiUrl3).catch(this.errorHandler);
+  }
+
   errorHandler(error:HttpErrorResponse){
+    console.log('Got error call message='+error.message + ',type=' +error.type+ ',name=' +error.name);
     return Observable.throw(error.message || "Server Error");
   }
 
